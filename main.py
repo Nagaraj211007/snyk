@@ -7,7 +7,7 @@ from pathlib import Path
 
 # --- 1) Secrets & config ---
 # Avoid hardcoding secrets; read from env or a secrets manager.
-DB_PATH = os.environ.get("APP_DB_PATH", "app.db")
+DB_PATH = os.environ.get("APPDB_PATH", "app.db")
 
 # --- 2) Safe database queries (prevents SQL injection) ---
 def get_user_by_name(conn, name: str):
@@ -65,5 +65,6 @@ if _name_ == "_main_":
 
     saved = save_user_file("hello.txt", b"safe write")
     print("Saved:", saved)
+
 
     print(run_tool("echo", "Hello123"))
