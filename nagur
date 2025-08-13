@@ -1,0 +1,13 @@
+# Simple Python Program: Age Calculator
+
+# Ask for the user's name
+name = input("What is your name? ")
+
+# Ask for the user's age
+age = int(input("How old are you? "))
+
+# Calculate future age
+future_age = age + 10
+
+# Display the result
+print(f"Hello, {name}! In 10 years, you will be {future_age} years old.")
